@@ -6,13 +6,24 @@ body {
 
 h1 {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 40px;
+	font-size: 50px;
+	margin: 20px 10px;
 }
 
 #instructions {
-
+	border-style: solid;
+	border-width: 3px;
+	border-color: grey;
+	padding: 10px 10px 15px 10px;
+	display: inline-block;
 }
+
+p {
+	margin-top: 5px;
+}
+
 #random-number {
+	margin: 20px 10px;
 	font-size: 30px;
 	background-color: #8FD8D2;
 	padding: 20px 20px;
@@ -20,9 +31,9 @@ h1 {
 }
 
 #wins-counter {
-	width: 100px;
+	display: inline-block;
 	margin-top: 20px;
-	padding-left: 10px;
+	padding: 10px;
 	border-style: solid;
 	border-width: 3px;
 	border-color: grey;
@@ -39,5 +50,6 @@ h1 {
  }
 
  #score {
- 	font-size: 30px;
+ 	font-size: 40px;
+ 	margin-top: 25px;
  }

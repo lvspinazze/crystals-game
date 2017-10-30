@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
 var wins = 0;
@@ -17,46 +18,35 @@ for (var i = 0; i < crystals.length; i++) {
 	$("crystals").attr(pointValue);
 	console.log(pointValue);
 
-	$("#images").append("<img class=crystal-image src=" + crystals[i] + ">");
+	$("#images").append("<img class='crystal-image' src=" + crystals[i] +  " data-crystalvalue=" + pointValue + ">");
 }
 
 $(".crystal-image").on ("click", function() {
 
-	crystalValue = crystals.pointValue;
+	var crystalValue = ($(this).attr("data-crystalvalue"));
+	crystalValue = parseInt(crystalValue);
+
+	counter += crystalValue;
 
 	$("#score").html("Score: " + counter);
 
-	console.log(counter);
-	
+	if (counter === targetNumber) {
+		$("#wins-counter").prepend("You Win!!!")
+		wins++;
+		gameReset();
+	}
 
+	else if (counter > targetNumber) {
+		$("#wins-counter").prepend("You Lose!!!")
+		losses++;
+		gameReset();
+	}
+	
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	function gameReset() {
+		var counter = 0;
+	}
 
 });
+
